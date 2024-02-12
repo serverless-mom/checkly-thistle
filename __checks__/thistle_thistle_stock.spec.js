@@ -11,6 +11,8 @@ test('victorian hand belt in stock', async ({ page }) => {
 
     // Take a screenshot
     await page.screenshot({ path: 'screenshot.jpg' })
+
+    //check the stock
     await expect(page.getByText('in stock')).toBeVisible()
 
     // Test that the response did not fail
